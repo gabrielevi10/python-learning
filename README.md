@@ -1,1 +1,1 @@
-# python-learning
+# Repository to learn python and pratice.
