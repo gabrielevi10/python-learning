@@ -21,7 +21,6 @@ class List:
 			current_node.next = List_node(value, current_node.next)
 			self.size = self.size + 1
 		
-
 	def remove(self, position):
 		if(position != None  and  self.head != None  and  self.size != 0):	
 			if(position == "head"):
