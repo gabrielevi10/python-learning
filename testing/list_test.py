@@ -29,7 +29,15 @@ class ListTestCase(unittest.TestCase):
 		test_list.insert(3, 3)
 		test_list.insert(4, 2)
 		self.assertEqual(test_list.search(4), 2)
-	
+
+	def test_remove(self):
+		test_list = List(None, 0)
+		test_list.insert(0, 0)
+		test_list.insert(1, 1)
+		test_list.insert(2, 2)
+		test_list.insert(3, 3)
+		test_list.remove(3)
+		self.assertEqual(test_list.search(2), -1)
 
 if __name__ == '__main__':
 	unittest.main()

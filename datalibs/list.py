@@ -31,7 +31,15 @@ class List:
 				while(current_node.next != self.last):
 					current_node = current_node.next
 				last = current_node
+			if(position <= self.size):
+				current_node = self.head
+				index = 1
+				while(index != position - 1 and current_node.next != None):
+					index = index + 1
+					current_node = current_node.next
+				current_node.next = current_node.next.next
 		self.size = self.size - 1
+
 
 	def search(self, value):
 		if(self.head != None  and  self.size != 0):
@@ -44,6 +52,8 @@ class List:
 					break
 				current_node = current_node.next
 				position = position + 1
+			if(not flag):
+				position = -1
 			return position
 
 	def print_list(self):
